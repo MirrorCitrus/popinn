@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/whisper_bubble"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#60ff0000">
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+        <ImageView
+                android:id="@+id/whisper_bubble_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/bg_whisper_bubble_normal"/>
+
+        <TextView
+                android:id="@+id/whisper_bubble_text"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:textColor="#4f4e50"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="我是提示气泡"/>
+    </FrameLayout>
+
+</FrameLayout>

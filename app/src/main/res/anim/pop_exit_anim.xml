@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha
+            android:fromAlpha="1"
+            android:toAlpha="0"
+            android:fillBefore="true"
+            android:duration="230"
+            android:startOffset="0"/>
+</set>
