@@ -1,12 +1,19 @@
-package cdf.com.easypop.choreo;
+/*
+ * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+ */
+package cdf.com.easypop.popinn;
+
+import java.lang.reflect.Method;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -130,9 +137,8 @@ public class FloatPopupView extends FrameLayout {
         } else {
             // View instances
             if (root instanceof TextView) {
-                int color = ((TextView) root).getCurrentTextColor();
-                color = changeColor(color, colorFilter);
-                ((TextView) root).setTextColor(color);
+                TextView tv = (TextView) root;
+                tv.getPaint().setColorFilter(colorFilter);
             } else if (root instanceof ImageView) {
                 Drawable drawable = ((ImageView) root).getDrawable();
                 if (drawable != null) {

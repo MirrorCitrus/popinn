@@ -20,6 +20,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="是否使用夜间模式"/>
+    
+    <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     <ScrollView
             android:layout_width="match_parent"
@@ -72,6 +77,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="自动夜间模式浮层(MODE:ColorFilter)"/>
+
+            <Button
+                    android:layout_margin="1dp"
+                    android:id="@+id/main_button_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="浮层代理类展示"/>
+
+            <Button
+                    android:layout_margin="1dp"
+                    android:id="@+id/main_button_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="数据绑定支持"/>
+
+            <Button
+                    android:layout_margin="1dp"
+                    android:id="@+id/main_button_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="测试Gravity"/>
+
+            <Button
+                    android:layout_margin="1dp"
+                    android:id="@+id/main_button_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="测试手动关闭"/>
+            <Button
+                    android:layout_margin="1dp"
+                    android:id="@+id/main_button_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点我主动关闭上一个浮层"/>
 
         </LinearLayout>
     </ScrollView>

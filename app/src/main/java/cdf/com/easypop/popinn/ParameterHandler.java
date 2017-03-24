@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
  */
-package cdf.com.easypop.choreo;
+package cdf.com.easypop.popinn;
 
 /**
  * Created by cdf on 17/3/11.
@@ -17,7 +17,7 @@ public abstract class ParameterHandler<T> {
     abstract void apply(PopLayoutParams params, T value);
 
     /**
-     * Location parameter handler, apply x, y to PopupWindow
+     * PopLayout parameter handler, apply x, y to PopupWindow
      */
     public static class Location extends ParameterHandler<Integer> {
 
@@ -79,6 +79,13 @@ public abstract class ParameterHandler<T> {
         @Override
         void apply(PopLayoutParams params, Boolean value) {
             params.isNight = value;
+        }
+    }
+
+    public static class Gravity extends ParameterHandler<Integer> {
+        @Override
+        void apply(PopLayoutParams params, Integer value) {
+            params.gravity = value;
         }
     }
 }

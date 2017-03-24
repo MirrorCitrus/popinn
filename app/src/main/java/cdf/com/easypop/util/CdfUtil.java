@@ -3,12 +3,9 @@
  */
 package cdf.com.easypop.util;
 
-/*
- * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
- */
-
 import java.util.List;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -37,7 +34,7 @@ public class CdfUtil {
     }
 
     public static void loge(Exception e) {
-        log(android.util.Log.getStackTraceString(e));
+        log(Log.getStackTraceString(e));
     }
 
     public static void logStackTrace(String desc) {
@@ -68,7 +65,7 @@ public class CdfUtil {
         }
     }
 
-    public static void logArray(String name, Object[] result) {
+    public static <T> void logArray(String name, T[] result) {
         StringBuilder sb = new StringBuilder(name);
         if (result == null) {
             sb.append(":null");
@@ -82,30 +79,12 @@ public class CdfUtil {
             log(sb.toString());
         } else {
             sb.append("[");
-            for (Object o : result) {
-                sb.append(o.toString() + ",");
-            }
-            sb.append("]");
-            log(sb.toString());
-        }
-    }
-
-    public static void logArray(String name, Object[] result, CdfLogArrayHelper helper) {
-        StringBuilder sb = new StringBuilder(name);
-        if (result == null) {
-            sb.append(":null");
-            log(sb.toString());
-            return;
-        }
-        int size = result.length;
-        sb.append("(" + size + ")");
-        if (size == 0) {
-            sb.append("[]");
-            log(sb.toString());
-        } else {
-            sb.append("[");
-            for (Object o : result) {
-                sb.append(helper.print(o) + ",");
+            for (T o : result) {
+                if (o == null) {
+                    sb.append("null,");
+                } else {
+                    sb.append(o.toString() + ",");
+                }
             }
             sb.append("]");
             log(sb.toString());
@@ -148,7 +127,7 @@ public class CdfUtil {
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setColor(color);
         mPaint.setStrokeWidth(5);
-        sRect.set(0,0,canvas.getWidth(), canvas.getHeight());
+        sRect.set(0, 0, canvas.getWidth(), canvas.getHeight());
         canvas.drawRect(sRect, mPaint);
     }
 
@@ -176,8 +155,10 @@ public class CdfUtil {
         }
     }
 
-    public interface CdfLogArrayHelper<T> {
-        String print(T item);
+    public static int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
     }
+
 
 }
