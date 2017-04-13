@@ -30,7 +30,7 @@ popService.showGeneralPop();
 - Interface + Annotation形式展现浮层
 - 直接指定R.layout资源展示/指定contentView实例展示
 - 浮层代理类支持（类似于Fragment的功能）
-- 指定缩放比例的appScale支持
+- 指定缩放比例支持
 - 动画绑定
 - 统一的dismiss处理；统一&分立的show/dismiss事件分发支持
 - 数据绑定
