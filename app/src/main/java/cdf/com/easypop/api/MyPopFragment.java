@@ -10,9 +10,12 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.citrus.popinn.PopFragment;
+import com.citrus.popinn.PopLayoutParams;
+import com.citrus.popinn.anno.Layout;
+
 import cdf.com.easypop.R;
-import cdf.com.easypop.popinn.PopFragment;
-import cdf.com.easypop.popinn.PopLayoutParams;
 import cdf.com.easypop.util.CdfUtil;
 
 /**
@@ -37,6 +40,7 @@ public class MyPopFragment extends PopFragment implements View.OnClickListener, 
     private int mPopWinX = 0;
     private int mPopWinY = 0;
 
+    @Layout(R.layout.activity_main)
     @Override
     public View onCreateView(Context context, ViewGroup parentView) {
         View contentView = LayoutInflater.from(context).inflate(R.layout.pop_delegate, parentView);

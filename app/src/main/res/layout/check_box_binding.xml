@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<layout>
+
+    <data>
+
+        <variable
+                name="config" type="cdf.com.easypop.model.MyConfig"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="30dp"
+            android:background="#013379">
+
+        <CheckBox
+                android:text="设置1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox"
+                android:checked="@={config.isChecked1}"
+                />
+
+        <CheckBox
+                android:text="设置2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox2"
+                android:checked="@={config.isChecked2}"
+                />
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_text"
+                android:text="@={config.text}"/>
+        
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{config::toggle}"
+                android:text="更改config"/>
+        
+        <Button
+                android:id="@+id/btn_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="关闭"/>
+
+    </LinearLayout>
+</layout>

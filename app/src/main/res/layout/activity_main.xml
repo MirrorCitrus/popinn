@@ -15,6 +15,32 @@
         android:orientation="vertical"
         tools:context="cdf.com.easypop.MainActivity">
 
+    
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+                android:id="@+id/global_pop_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关闭任意"/>
+        <CheckBox
+                android:id="@+id/global_pop_show_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在展示:"/>
+
+        <TextView
+                android:id="@+id/global_pop_tag"
+                android:text=""
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+
     <CheckBox
             android:id="@+id/night_mode_checkbox"
             android:layout_width="match_parent"
@@ -111,6 +137,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="点我主动关闭上一个浮层"/>
+
+            <Button
+                    android:layout_margin="1dp"
+                    android:id="@+id/main_button_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="对浮层的所有子View添加Click监听"/>
+
+            <Button
+                    android:layout_margin="1dp"
+                    android:id="@+id/main_button_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="含有checkbox的数据绑定"/>
 
         </LinearLayout>
     </ScrollView>
